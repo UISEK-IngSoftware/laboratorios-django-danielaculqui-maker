@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}{{ trainer | capfirst }}{% endblock title %}
+{% block content %}
+<p>Has elegido el entrenador: <strong>{{ trainer | capfirst }}</strong></p>
+<h3> Detalles del Entrenador </h3>
+<ul class="list-group">
+<li class="list-group-item">
+    <strong> Nombre: </strong> {{ trainer.first_name | capfirst }}
+</li>
+<li class="list-group-item">
+    <strong> Apellido: </strong> {{ trainer.last_name | capfirst }}
+</li>
+<li class="list-group-item">
+    <strong> Fecha de nacimiento: </strong> {{ trainer.birth_date }}
+</li>
+<li class="list-group-item">
+    <strong> Nivel: </strong> {{ trainer.level }}
+</li>
+</ul>
+<a href="/" class="btn btn-primary mt-3">Volver</a>
+{% endblock content %}
