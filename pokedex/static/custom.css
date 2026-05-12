@@ -2,3 +2,53 @@
     width: 350px;
     height: auto;
 }
+body{
+    background-color: #f4f6f9;
+}
+
+.logo{
+    width: 250px;
+}
+
+.card-pokemon{
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+    background: white;
+}
+
+.card-pokemon:hover{
+    transform: translateY(-5px);
+}
+
+.pokemon-img{
+    height: 220px;
+    width: 100%;
+    object-fit: contain;
+    background-color: #f8f9fa;
+    padding: 10px;
+}
+
+.badge-type{
+    font-size: 14px;
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.detail-box{
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 12px rgba(0,0,0,0.1);
+}
+
+.trainer-card{
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.trainer-card:hover{
+    transform: scale(1.03);
+}

@@ -1,21 +1,52 @@
 {% extends "base.html" %}
-{% block title %}{{ trainer | capfirst }}{% endblock title %}
+
+{% block title %}
+{{ trainer }}
+{% endblock title %}
+
 {% block content %}
-<p>Has elegido el entrenador: <strong>{{ trainer | capfirst }}</strong></p>
-<h3> Detalles del Entrenador </h3>
-<ul class="list-group">
-<li class="list-group-item">
-    <strong> Nombre: </strong> {{ trainer.first_name | capfirst }}
-</li>
-<li class="list-group-item">
-    <strong> Apellido: </strong> {{ trainer.last_name | capfirst }}
-</li>
-<li class="list-group-item">
-    <strong> Fecha de nacimiento: </strong> {{ trainer.birth_date }}
-</li>
-<li class="list-group-item">
-    <strong> Nivel: </strong> {{ trainer.level }}
-</li>
-</ul>
-<a href="/" class="btn btn-primary mt-3">Volver</a>
+
+<div class="detail-box mt-5">
+
+    <div class="text-center mb-4">
+
+        <i class="fa-solid fa-user fa-5x text-primary"></i>
+
+        <h2 class="mt-3">
+            {{ trainer }}
+        </h2>
+
+    </div>
+
+    <ul class="list-group">
+
+        <li class="list-group-item">
+            <strong>Nombre:</strong>
+            {{ trainer.first_name }}
+        </li>
+
+        <li class="list-group-item">
+            <strong>Apellido:</strong>
+            {{ trainer.last_name }}
+        </li>
+
+        <li class="list-group-item">
+            <strong>Fecha de nacimiento:</strong>
+            {{ trainer.birth_date }}
+        </li>
+
+        <li class="list-group-item">
+            <strong>Nivel:</strong>
+            {{ trainer.level }}
+        </li>
+
+    </ul>
+
+    <a href="/"
+       class="btn btn-primary mt-4">
+       Volver
+    </a>
+
+</div>
+
 {% endblock content %}

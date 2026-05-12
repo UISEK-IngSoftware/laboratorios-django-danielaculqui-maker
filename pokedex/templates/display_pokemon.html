@@ -1,24 +1,60 @@
 {% extends "base.html" %}
-{% block title %}{{ pokemon | capfirst }}{% endblock title %}
+
+{% block title %}
+{{ pokemon.name }}
+{% endblock title %}
+
 {% block content %}
-<p>Has elegido el pokemon: <strong>{{ pokemon | capfirst }}</strong></p>
-<h3> Detalles del Pokemon </h3>
-<ul class="list-group">
-    <li class="list-group-item">
-    <strong> Nombre: </strong> {{pokemon | capfirst }}
-    </li>
-    <li class="list-group-item">
-    <strong> Tipo: </strong> {{pokemon.type | capfirst }}
-    </li>
-    <li class="list-group-item">
-    <strong> Altura: </strong> {{pokemon.height }} metros
-    </li>
-    <li class="list-group-item">
-    <strong> Peso:</strong> {{pokemon.weight }} kilogramos
-    </li>
-    <li class="list-group-item">
-    <strong> Entrenador:</strong> {{pokemon.trainer }} 
-    </li>
-</ul>
-<a href="/" class="btn btn-primary mt-3">Volver</a>
+
+<div class="row mt-5">
+
+    <div class="col-md-5">
+
+        <div class="detail-box text-center">
+
+            <img src="{{ pokemon.picture.url }}"
+                 class="img-fluid pokemon-img">
+
+        </div>
+
+    </div>
+
+    <div class="col-md-7">
+
+        <div class="detail-box">
+
+            <h2>{{ pokemon.name }}</h2>
+
+            <span class="badge bg-primary">
+                {{ pokemon.get_type_display }}
+            </span>
+
+            <hr>
+
+            <p>
+                <strong>Altura:</strong>
+                {{ pokemon.height }} metros
+            </p>
+
+            <p>
+                <strong>Peso:</strong>
+                {{ pokemon.weight }} kilogramos
+            </p>
+
+            <p>
+                <strong>Entrenador:</strong>
+                {{ pokemon.trainer }}
+            </p>
+
+            <a href="/"
+               class="btn btn-primary mt-3">
+                Volver
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
 {% endblock content %}
