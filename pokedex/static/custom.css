@@ -1,13 +1,10 @@
 .logo{
-    width: 350px;
+    width: 500px;
     height: auto;
 }
 body{
     background-color: #f4f6f9;
-}
-
-.logo{
-    width: 250px;
+    font-family: 'Fredoka', sans-serif;
 }
 
 .card-pokemon{
@@ -52,3 +49,4 @@ body{
 .trainer-card:hover{
     transform: scale(1.03);
 }
+
