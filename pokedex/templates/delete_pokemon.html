@@ -8,9 +8,15 @@ Eliminar Pokémon
 
 <div class="detail-box mt-5 text-center">
 
+    {% if pokemon.picture %}
     <img src="{{ pokemon.picture.url }}"
          class="pokemon-img mb-4"
          style="max-width:300px;">
+    {% else %}
+    <img src="https://placehold.co/300x300?text=Sin+imagen"
+         class="pokemon-img mb-4"
+         style="max-width:300px;">
+    {% endif %}
 
     <h2>
         ¿Eliminar a {{ pokemon.name }}?

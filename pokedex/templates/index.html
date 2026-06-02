@@ -23,7 +23,11 @@
 {% for pokemon in pokemons %}
 <div class="col-md-4 mb-4">
     <div class="card card-pokemon h-100">
+        {% if pokemon.picture %}
         <img src="{{ pokemon.picture.url }}" class="pokemon-img">
+        {% else %}
+        <img src="https://placehold.co/200x200?text=Sin+imagen" class="pokemon-img">
+        {% endif %}
         <div class="card-body">
             <h4 class="card-title">{{ pokemon.name }}</h4>
             <span class="badge bg-primary badge-type">{{ pokemon.get_type_display }}</span>
@@ -68,6 +72,8 @@
     <div class="card card-pokemon h-100">
         {% if trainer.picture %}
         <img src="{{ trainer.picture.url }}" alt="{{ trainer }}" class="pokemon-img">
+        {% else %}
+        <img src="https://placehold.co/200x200?text=Sin+imagen" class="pokemon-img">
         {% endif %}
         <div class="card-body">
             <h5>{{ trainer }}</h5>
